@@ -52,6 +52,7 @@ Class assignment in PHP
     5. Should show a shopping cart
 
 • Administrator
+
     1. The Repository page should present a form, which submits the products to
        the Database. The form should have the necessary fields e.g.
         a. Product Name

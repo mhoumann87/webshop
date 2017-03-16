@@ -1,0 +1,32 @@
+{
+  "name": "webshop",
+  "version": "0.0.1",
+  "description": "Class assignment in PHP",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mhoumann87/webshop.git"
+  },
+  "keywords": [
+    "PHP",
+    "Sass",
+    "Grunt",
+    "Education"
+  ],
+  "author": "Michael Houmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mhoumann87/webshop/issues"
+  },
+  "homepage": "https://github.com/mhoumann87/webshop#readme",
+  "dependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-compass": "^1.1.1",
+    "grunt-contrib-uglify": "^2.2.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "matchdep": "^1.0.1"
+  }
+}

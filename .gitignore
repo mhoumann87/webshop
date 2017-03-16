@@ -144,3 +144,6 @@ typings/
 
 /public/assets/Images
 /includes/classes/class.connection.inc.php
+
+#Grunt
+dist/
