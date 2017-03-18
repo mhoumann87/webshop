@@ -8,6 +8,10 @@
     <title>Web Shop - Home</title>
 </head>
 <body>
+
+<h1>Test</>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur impedit laboriosam asperiores quo hic in. Nihil architecto quae maiores, aliquid, eveniet eum pariatur reiciendis at cupiditate accusamus, modi dolor minus!</p>
     
 
 <script src="./assets/js/script.js"></script>     
