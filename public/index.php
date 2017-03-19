@@ -1,19 +1,19 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./assets/css/style.css" type="text/css">
-    <title>Web Shop - Home</title>
-</head>
-<body>
+<?php include_once('./../includes/header.inc.php'); ?>
+    <nav>
+        <?php //TODO Navigation in 3 part, one for admin, one for costumers and one for all ?>
+    </nav>
+    <main>
 
-<h1>Test</>
+        <?php
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur impedit laboriosam asperiores quo hic in. Nihil architecto quae maiores, aliquid, eveniet eum pariatur reiciendis at cupiditate accusamus, modi dolor minus!</p>
-    
+        /***
+        * TODO Make rows with the newest added products in each category
+        ***/
+        ?>
 
-<script src="./assets/js/script.js"></script>     
-</body>
-</html>
+
+    </main>
+
+    <!-- Maybe an aside here with a contact form -->
+
+<?php include_once('./../includes/footer.inc.php'); ?>

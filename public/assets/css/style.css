@@ -49,14 +49,105 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 3, ../../../development/sass/_base.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Baloo Bhaina', cursive; }
+/* line 1, ../../../development/sass/_base.scss */
+html {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
 
-/* line 8, ../../../development/sass/_base.scss */
-p {
-  font-family: 'Muli', sans-serif; }
+/* line 6, ../../../development/sass/_base.scss */
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit; }
 
 /* line 12, ../../../development/sass/_base.scss */
 body {
-  background-color: red; }
+  background-color: #EBDDC0;
+  width: 100%;
+  margin: 0; }
+
+/* line 18, ../../../development/sass/_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Baloo Bhaina", cursive;
+  color: #6A94D7; }
+
+/* line 24, ../../../development/sass/_base.scss */
+h1 {
+  font-size: 3.5rem; }
+
+/* line 28, ../../../development/sass/_base.scss */
+p {
+  font-family: "Muli", sans-serif;
+  color: #706C60;
+  font-size: 1rem; }
+
+/* line 34, ../../../development/sass/_base.scss */
+a, a:visited, a:active {
+  color: #E9FDFF;
+  text-decoration: none; }
+
+/* line 40, ../../../development/sass/_base.scss */
+a:hover {
+  color: #6A94D7; }
+
+/* line 1, ../../../development/sass/_header.scss */
+header {
+  background-color: #ABCCD8;
+  width: 100%;
+  height: auto; }
+  /* line 6, ../../../development/sass/_header.scss */
+  header .headerBox {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between; }
+    /* line 13, ../../../development/sass/_header.scss */
+    header .headerBox .shopName {
+      padding: 0.650rem; }
+    /* line 17, ../../../development/sass/_header.scss */
+    header .headerBox .shopLogo {
+      height: 3.5rem;
+      width: auto;
+      padding: 0.650rem; }
+      /* line 22, ../../../development/sass/_header.scss */
+      header .headerBox .shopLogo .logoSvg {
+        width: 3.2rem;
+        height: auto; }
+
+/* line 1, ../../../development/sass/_footer.scss */
+footer {
+  background-color: #ABCCD8;
+  width: 100%;
+  margin-top: 0.850rem;
+  margin-bottom: 1rem; }
+  /* line 7, ../../../development/sass/_footer.scss */
+  footer .footerBox {
+    width: 90%;
+    margin-right: auto;
+    margin-left: auto;
+    display: flex; }
+    /* line 13, ../../../development/sass/_footer.scss */
+    footer .footerBox .footerText {
+      width: 50%;
+      display: flex;
+      font-size: 1.5rem; }
+      /* line 18, ../../../development/sass/_footer.scss */
+      footer .footerBox .footerText h3 {
+        font-size: 2rem; }
+      /* line 22, ../../../development/sass/_footer.scss */
+      footer .footerBox .footerText .footerAdr, footer .footerBox .footerText footerEmpty {
+        width: 50%;
+        padding: 10px; }
+    /* line 29, ../../../development/sass/_footer.scss */
+    footer .footerBox .socialBox {
+      width: 50%;
+      display: flex;
+      align-items: center; }
+      /* line 34, ../../../development/sass/_footer.scss */
+      footer .footerBox .socialBox .socialIcon {
+        width: 25%;
+        text-align: center;
+        font-size: 2.5rem;
+        color: #6A94D7; }

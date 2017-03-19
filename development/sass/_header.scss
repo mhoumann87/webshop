@@ -1,0 +1,28 @@
+header {
+  background-color: $lightblue;
+  width: 100%;
+  height: auto;
+
+  .headerBox {
+    width:90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    .shopName {
+      padding: 0.650rem;
+    }
+
+    .shopLogo {
+      height:3.5rem;
+      width: auto;
+      padding: 0.650rem;
+
+      .logoSvg {
+        width:3.2rem;
+        height: auto;
+      }
+    }
+  }
+}
