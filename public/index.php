@@ -1,7 +1,5 @@
 <?php include_once('./../includes/header.inc.php'); ?>
-    <nav>
-        <?php //TODO Navigation in 3 part, one for admin, one for costumers and one for all ?>
-    </nav>
+
     <main>
 
         <?php

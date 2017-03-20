@@ -20,3 +20,5 @@
         </div>
     </div>
 </header>
+
+<?php include_once ('navbar.inc.php') ?>

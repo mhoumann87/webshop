@@ -151,3 +151,11 @@ footer {
         text-align: center;
         font-size: 2.5rem;
         color: #6A94D7; }
+
+/* line 1, ../../../development/sass/_navbar.scss */
+nav {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  background-color: #E9FDFF;
+  margin: 0; }
