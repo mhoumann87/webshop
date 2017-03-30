@@ -4,4 +4,29 @@ nav {
   overflow: hidden;
   background-color: $lightgreen;
   margin: 0;
+
+  a, a:visited, a:active {
+    color: black;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    display: inline;
+    position: relative;
+  }
+
+  ul ul {
+
+    position: absolute;
+    display: none;
+  }
+
+  li:hover ul {
+    display: block;
 }
+}
+

@@ -1,3 +1,7 @@
+<?php include_once ('../includes/connection.php'); ?>
+<?php include_once ('../includes/functions.php'); ?>
+<?php include_once ('../includes/sessions.inc.php'); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

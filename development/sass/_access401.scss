@@ -1,0 +1,32 @@
+.text-box {
+  width: 50%;
+  margin: 0.850rem auto;
+  @include border(5px);
+  @include border-radius(10px);
+  height: 70vh;
+  background-color: $lightgreen;
+  padding: .850rem;
+  text-align: center;
+
+  a, a:visited, a:active {
+    color: $darkblue;
+    text-decoration: underline;
+  }
+
+  h3 {
+    padding-bottom: 2rem;
+  }
+
+  .denied {
+    width: 262px;
+    height:auto;
+    margin: 3em auto;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+
+}

@@ -91,6 +91,12 @@ a, a:visited, a:active {
 a:hover {
   color: #6A94D7; }
 
+/* line 44, ../../../development/sass/_base.scss */
+main {
+  width: 90%;
+  margin: 15px auto;
+  overflow: hidden; }
+
 /* line 1, ../../../development/sass/_header.scss */
 header {
   background-color: #ABCCD8;
@@ -159,3 +165,105 @@ nav {
   overflow: hidden;
   background-color: #E9FDFF;
   margin: 0; }
+  /* line 8, ../../../development/sass/_navbar.scss */
+  nav a, nav a:visited, nav a:active {
+    color: black; }
+  /* line 12, ../../../development/sass/_navbar.scss */
+  nav ul {
+    padding: 0;
+    margin: 0; }
+  /* line 17, ../../../development/sass/_navbar.scss */
+  nav li {
+    display: inline;
+    position: relative; }
+  /* line 22, ../../../development/sass/_navbar.scss */
+  nav ul ul {
+    position: absolute;
+    display: none; }
+  /* line 28, ../../../development/sass/_navbar.scss */
+  nav li:hover ul {
+    display: block; }
+
+/* line 1, ../../../development/sass/_login.scss */
+.formBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline; }
+
+/* line 8, ../../../development/sass/_login.scss */
+.loginBox, .signupBox {
+  width: 50%;
+  background-color: #E9FDFF;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  border: 5px solid #6A94D7; }
+  /* line 13, ../../../development/sass/_login.scss */
+  .loginBox h3, .signupBox h3 {
+    font-size: 2em;
+    padding: 0.850rem; }
+  /* line 18, ../../../development/sass/_login.scss */
+  .loginBox a, .loginBox a:visited, .loginBox a:active, .signupBox a, .signupBox a:visited, .signupBox a:active {
+    color: #00BD00;
+    text-decoration: underline; }
+  /* line 23, ../../../development/sass/_login.scss */
+  .loginBox .login, .loginBox .signup, .signupBox .login, .signupBox .signup {
+    width: 50%;
+    margin: 10px auto;
+    min-height: 60vh; }
+    /* line 28, ../../../development/sass/_login.scss */
+    .loginBox .login input, .loginBox .signup input, .signupBox .login input, .signupBox .signup input {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+      padding: 0.425rem; }
+    /* line 33, ../../../development/sass/_login.scss */
+    .loginBox .login .button, .loginBox .signup .button, .signupBox .login .button, .signupBox .signup .button {
+      margin-top: 0.425rem;
+      font-size: 1.1rem;
+      color: #E9FDFF;
+      background-color: #00BD00; }
+  /* line 42, ../../../development/sass/_login.scss */
+  .loginBox .redborder, .signupBox .redborder {
+    border: 1px solid #EB0000; }
+  /* line 46, ../../../development/sass/_login.scss */
+  .loginBox .error, .signupBox .error {
+    font-weight: bold;
+    color: #EB0000; }
+  /* line 51, ../../../development/sass/_login.scss */
+  .loginBox .success, .signupBox .success {
+    font-weight: bold;
+    color: #00BD00; }
+
+/* line 1, ../../../development/sass/_access401.scss */
+.text-box {
+  width: 50%;
+  margin: 0.850rem auto;
+  border: 5px solid #6A94D7;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  height: 70vh;
+  background-color: #E9FDFF;
+  padding: .850rem;
+  text-align: center; }
+  /* line 11, ../../../development/sass/_access401.scss */
+  .text-box a, .text-box a:visited, .text-box a:active {
+    color: #6A94D7;
+    text-decoration: underline; }
+  /* line 16, ../../../development/sass/_access401.scss */
+  .text-box h3 {
+    padding-bottom: 2rem; }
+  /* line 20, ../../../development/sass/_access401.scss */
+  .text-box .denied {
+    width: 262px;
+    height: auto;
+    margin: 3em auto; }
+    /* line 25, ../../../development/sass/_access401.scss */
+    .text-box .denied img {
+      width: 100%;
+      height: auto; }

@@ -1,0 +1,57 @@
+.formBox {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.loginBox, .signupBox {
+  width: 50%;;
+  background-color: $lightgreen;
+  @include border-radius(10px);
+  @include border(5px);
+  h3 {
+    font-size: 2em;
+    padding:0.850rem;
+  }
+
+  a, a:visited, a:active{
+    color: $success;
+    text-decoration: underline;
+  }
+
+  .login, .signup {
+    width: 50%;
+    margin:10px auto;
+    min-height: 60vh;
+
+    input {
+      @include border-radius(5px);
+      padding: 0.425rem;
+    }
+
+    .button {
+      margin-top: 0.425rem;
+      font-size: 1.1rem;
+      color: $lightgreen;
+      background-color: $success;
+    }
+
+  }
+
+  .redborder {
+    border: 1px solid $error;
+  }
+
+  .error {
+    font-weight: bold;
+    color: $error;
+  }
+
+  .success {
+    font-weight: bold;
+    color: $success
+  }
+
+
+}
