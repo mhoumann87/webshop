@@ -94,8 +94,75 @@ a:hover {
 /* line 44, ../../../development/sass/_base.scss */
 main {
   width: 90%;
-  margin: 15px auto;
+  margin: 1.5rem auto;
   overflow: hidden; }
+
+/* line 51, ../../../development/sass/_base.scss */
+.redborder {
+  border: 1px solid #EB0000; }
+
+/* line 55, ../../../development/sass/_base.scss */
+.error {
+  font-weight: bold;
+  color: #EB0000; }
+
+/* line 60, ../../../development/sass/_base.scss */
+.success {
+  font-weight: bold;
+  color: #00BD00; }
+
+/* line 65, ../../../development/sass/_base.scss */
+.productList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline; }
+
+/* line 73, ../../../development/sass/_base.scss */
+.product {
+  width: 18%;
+  background-color: #E9FDFF;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  border: 1px solid #6A94D7;
+  margin: 0.5rem; }
+  /* line 80, ../../../development/sass/_base.scss */
+  .product .photoBox {
+    width: 100%; }
+    /* line 83, ../../../development/sass/_base.scss */
+    .product .photoBox .prodPhoto {
+      width: 100%;
+      height: auto; }
+  /* line 89, ../../../development/sass/_base.scss */
+  .product .prodText {
+    width: 100%;
+    padding: 0.425rem; }
+  /* line 94, ../../../development/sass/_base.scss */
+  .product .info {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6A94D7; }
+  /* line 100, ../../../development/sass/_base.scss */
+  .product .hl {
+    background-color: #6A94D7;
+    padding: 0.425rem;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px; }
+    /* line 105, ../../../development/sass/_base.scss */
+    .product .hl h4 {
+      color: #ABCCD8; }
+    /* line 109, ../../../development/sass/_base.scss */
+    .product .hl p {
+      color: #ABCCD8; }
+  /* line 114, ../../../development/sass/_base.scss */
+  .product a, .product a:visited, .product a:active {
+    color: #6A94D7;
+    text-decoration: underline; }
 
 /* line 1, ../../../development/sass/_header.scss */
 header {
@@ -226,17 +293,6 @@ nav {
       font-size: 1.1rem;
       color: #E9FDFF;
       background-color: #00BD00; }
-  /* line 42, ../../../development/sass/_login.scss */
-  .loginBox .redborder, .signupBox .redborder {
-    border: 1px solid #EB0000; }
-  /* line 46, ../../../development/sass/_login.scss */
-  .loginBox .error, .signupBox .error {
-    font-weight: bold;
-    color: #EB0000; }
-  /* line 51, ../../../development/sass/_login.scss */
-  .loginBox .success, .signupBox .success {
-    font-weight: bold;
-    color: #00BD00; }
 
 /* line 1, ../../../development/sass/_access401.scss */
 .text-box {
@@ -267,3 +323,108 @@ nav {
     .text-box .denied img {
       width: 100%;
       height: auto; }
+
+/* line 1, ../../../development/sass/_addProd.scss */
+.addBox {
+  width: 100%;
+  margin: 2rem 0; }
+  /* line 6, ../../../development/sass/_addProd.scss */
+  .addBox .addProductsForm {
+    width: 50%;
+    margin: 1rem auto;
+    background-color: #E9FDFF;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    border-radius: 10px;
+    border: 5px solid #6A94D7;
+    padding: 3rem; }
+    /* line 14, ../../../development/sass/_addProd.scss */
+    .addBox .addProductsForm input {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+      padding: 0.425rem; }
+    /* line 19, ../../../development/sass/_addProd.scss */
+    .addBox .addProductsForm .textArea {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      border-radius: 5px;
+      padding: 0.425rem;
+      width: 260px;
+      height: 200px; }
+    /* line 26, ../../../development/sass/_addProd.scss */
+    .addBox .addProductsForm .button {
+      margin-top: 0.425rem;
+      font-size: 1.1rem;
+      color: #E9FDFF;
+      background-color: #00BD00; }
+
+/* line 1, ../../../development/sass/_oneProduct.scss */
+.oneProduct {
+  width: 60%;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  border: 5px solid #6A94D7;
+  padding: 0.425rem;
+  margin: 0 auto;
+  background-color: #E9FDFF; }
+  /* line 9, ../../../development/sass/_oneProduct.scss */
+  .oneProduct .prodBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+    /* line 15, ../../../development/sass/_oneProduct.scss */
+    .oneProduct .prodBox .prodInfo, .oneProduct .prodBox .description {
+      width: 48%; }
+    /* line 19, ../../../development/sass/_oneProduct.scss */
+    .oneProduct .prodBox .photoBox {
+      width: 100%; }
+      /* line 22, ../../../development/sass/_oneProduct.scss */
+      .oneProduct .prodBox .photoBox .prodPhoto {
+        width: 100%;
+        height: auto; }
+
+/* line 1, ../../../development/sass/_shop.scss */
+.webshop {
+  width: 100%; }
+  /* line 4, ../../../development/sass/_shop.scss */
+  .webshop .category {
+    width: 100%; }
+    /* line 7, ../../../development/sass/_shop.scss */
+    .webshop .category .topbar {
+      width: 100%;
+      background-color: #6A94D7;
+      padding: 0.650rem;
+      margin: 1rem 0; }
+      /* line 13, ../../../development/sass/_shop.scss */
+      .webshop .category .topbar a, .webshop .category .topbar a:visited, .webshop .category .topbar a:active {
+        text-decoration: underline; }
+      /* line 17, ../../../development/sass/_shop.scss */
+      .webshop .category .topbar a:hover {
+        color: lightgrey; }
+  /* line 23, ../../../development/sass/_shop.scss */
+  .webshop .type {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline; }
+    /* line 30, ../../../development/sass/_shop.scss */
+    .webshop .type .typeTop {
+      width: 100%;
+      background-color: #ABCCD8;
+      padding: 0.325rem;
+      margin: 0.5rem 0; }
+      /* line 36, ../../../development/sass/_shop.scss */
+      .webshop .type .typeTop a, .webshop .type .typeTop a:visited, .webshop .type .typeTop a:active {
+        color: #6A94D7;
+        text-decoration: underline; }
+      /* line 41, ../../../development/sass/_shop.scss */
+      .webshop .type .typeTop a:hover {
+        color: #706C60; }

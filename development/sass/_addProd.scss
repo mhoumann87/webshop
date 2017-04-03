@@ -1,0 +1,33 @@
+.addBox {
+  width: 100%;
+  margin: 2rem 0;
+
+
+  .addProductsForm {
+    width:50%;
+    margin: 1rem auto ;
+    background-color: $lightgreen;
+    @include border-radius(10px);
+    @include border(5px);
+    padding: 3rem;
+
+    input {
+      @include border-radius(5px);
+      padding: 0.425rem;
+    }
+
+    .textArea {
+      @include border-radius(5px);
+      padding:  0.425rem;
+      width: 260px;
+      height: 200px;
+    }
+
+    .button {
+      margin-top: 0.425rem;
+      font-size: 1.1rem;
+      color: $lightgreen;
+      background-color: $success;
+    }
+  }
+}

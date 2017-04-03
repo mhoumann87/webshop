@@ -1,0 +1,47 @@
+.webshop {
+  width: 100%;
+
+  .category {
+    width: 100%;
+
+    .topbar {
+      width: 100%;
+      background-color: $darkblue;
+      padding: 0.650rem;
+      margin: 1rem 0;
+
+      a, a:visited, a:active {
+        text-decoration: underline;
+      }
+
+      a:hover {
+        color: lightgrey;
+      }
+    }
+  }
+
+  .type {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: baseline;
+
+    .typeTop {
+      width: 100%;
+      background-color: $lightblue;
+      padding: 0.325rem;
+      margin: 0.5rem 0;
+
+      a, a:visited, a:active {
+        color: $darkblue;
+        text-decoration: underline;
+      }
+
+      a:hover {
+        color: $text;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,28 @@
+.oneProduct {
+  width:60%;
+  @include border-radius(10px);
+  @include border(5px);
+  padding: 0.425rem;
+  margin:0 auto;
+  background-color: $lightgreen;
+
+  .prodBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .prodInfo, .description {
+      width: 48%;
+    }
+
+    .photoBox {
+      width: 100%;
+
+      .prodPhoto {
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}

@@ -17,10 +17,10 @@
 <header>
     <div class="headerBox">
         <div class="shopName">
-            <h1>New Clothes</h1>
+            <h1>ReMusic</h1>
         </div>
         <div class="shopLogo">
-            <a href="index.php"><img src="./assets/images/people.svg" class="logoSvg"></a>
+            <a href="index.php"><img src="./assets/images/logo.svg" class="logoSvg"></a>
         </div>
     </div>
 </header>

@@ -3,37 +3,41 @@
         <div class="navbar" id="nav">
             <ul>
                 <li><a href="./index.php">Home</a></li>
-                <li><a href="#">Shop</a>
+                <li><a href="./shop.php">Shop</a>
                     <ul>
-                        <li><a href="#">Mens</a>
-                            <ul>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
+                        <?php
+                        $categories = findCategories();
 
-                            </ul>
-                        <li><a href="#">Wonen</a>
-                            <ul>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
+                        while ($category = mysqli_fetch_assoc($categories)) {
 
-                            </ul>
-                        <li><a href="#">Children</a>
-                            <ul>
-                                <li><a href="#">1</a></li>
-                                <li><a href="#">2</a></li>
-                                <li><a href="#">3</a></li>
+                            echo '
+                           
+                                <li><a href="./products.php?cat='.$category['prod_category'].'">'.$category['prod_category'].'</a></li>
+                                    <ul>';
+                            $types = findTypes();
 
-                            </ul>
+                            while ($type = mysqli_fetch_assoc($types)) {
 
-                        </li>
-                    
+                                echo '
+                                    <li><a href="./products.php?cat='.$category['prod_category'].'&type='.$type['prod_type'].'">'.$type['prod_type'].'</a></li>
+                                    ';
+                            }
+
+                            echo ' 
+ 
+                         </ul>
+                        
+                        ';
+
+                        }
+
+                        ?>
                     </ul>
-                 </li>
-                 <li><a href="#">login/signup</a></li>
-                 <li><a href="#">Add products</a></li>
-                 <li><a href="#">Add Administrator</a></li>
+                </li>
+                <li><a href="./login.php">Login</a></li>
+                <li><a href="./signup.php">Signup</a></li>
+                <li><a href="./add_products.php">Add products</a></li>
+                <li><a href="./add_admins.php">Add Administrator</a></li>
             </ul>
         </div>
     </div>

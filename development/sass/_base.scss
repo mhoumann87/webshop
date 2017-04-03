@@ -43,7 +43,77 @@ a:hover {
 
 main {
   width: 90%;
-  margin: 15px auto;
+  margin: 1.5rem auto;
   overflow: hidden;
+
+}
+
+.redborder {
+  border: 1px solid $error;
+}
+
+.error {
+  font-weight: bold;
+  color: $error;
+}
+
+.success {
+  font-weight: bold;
+  color: $success
+}
+
+.productList {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: baseline;
+}
+
+.product {
+  width: 18%;
+  background-color: $lightgreen;
+  @include border-radius(10px);
+  @include border(1px);
+  margin: 0.5rem;
+
+  .photoBox {
+    width: 100%;
+
+    .prodPhoto {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .prodText {
+    width: 100%;
+    padding: 0.425rem;
+  }
+
+  .info {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: $darkblue;
+  }
+
+  .hl {
+    background-color: $darkblue;
+    padding: 0.425rem;
+    @include border-radius(10px);
+
+    h4 {
+      color: $lightblue;
+    }
+
+    p {
+      color: $lightblue;
+    }
+  }
+
+  a, a:visited, a:active {
+    color: $darkblue;
+    text-decoration: underline;
+  }
 
 }

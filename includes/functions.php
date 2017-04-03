@@ -31,6 +31,17 @@ function existingEmail($email) {
 
 }
 
+//Check product number to see if it is in use
+function usedProdNo($prodNo) {
+    global $conn;
+    $query = "SELECT * FROM products WHERE prod_number = '$prodNo'";
+    $result = mysqli_query($conn, $query);
+
+    if (mysqli_num_rows($result) === 0) {
+        return TRUE;
+    }
+}
+
 
 /***
  *  Database Functions
@@ -49,6 +60,60 @@ function addUser($name, $street, $houseno, $street2, $postno, $city, $phone, $ma
     } else {
         return $query;
     }
+}
+
+// Get a list of all products
+function getProducts() {
+    global $conn;
+    $getProdList = "SELECT * FROM `products`";
+    $prodList = mysqli_query($conn, $getProdList);
+    tjek_query($prodList);
+    return $prodList;
+}
+
+//get a list of the 10 newest products
+function getNewest() {
+    global $conn;
+    $getNewList = "SELECT * FROM products ORDER BY prod_added DESC  LIMIT 10";
+    $newProd = mysqli_query($conn, $getNewList);
+    tjek_query($newProd);
+    return $newProd;
+}
+
+//get a product form a get request
+function findProduct($id) {
+    global $conn;
+    $getProduct = "SELECT * FROM products WHERE prod_number = $id LIMIT 1";
+    $product = mysqli_query($conn, $getProduct);
+    tjek_query($product);
+    return $product;
+}
+
+//find the different categories in the db
+function findCategories() {
+    global $conn;
+    $findCategories= "SELECT DISTINCT prod_category FROM products";
+    $categories = mysqli_query($conn, $findCategories);
+    tjek_query($categories);
+    return $categories;
+}
+
+//find the different types in the db
+function findTypes() {
+    global $conn;
+    $findTypes = "SELECT DISTINCT prod_type FROM products";
+    $types = mysqli_query($conn, $findTypes);
+    tjek_query($types);
+    return $types;
+}
+
+//find products based on category and type
+function productList($cat, $type) {
+    global $conn;
+    $listProducts = "SELECT * FROM products WHERE prod_category = '$cat' AND prod_type ='$type'";
+    $list = mysqli_query($conn, $listProducts);
+    tjek_query($list);
+    return $list;
 }
 
 
