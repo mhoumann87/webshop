@@ -7,6 +7,12 @@
 
             <?php
 
+            if (isset($_GET['id']) && $_GET['id'] == 'new') {
+                echo '<h6 class="center">Welcome to the shop, please login before you continue</h6>';
+            } else {
+                echo '';
+            }
+
             $e1 = '';
             $e2 = '';
             $e3 = '';

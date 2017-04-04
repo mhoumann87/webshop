@@ -164,6 +164,10 @@ main {
     color: #6A94D7;
     text-decoration: underline; }
 
+/* line 120, ../../../development/sass/_base.scss */
+.center {
+  text-align: center; }
+
 /* line 1, ../../../development/sass/_header.scss */
 header {
   background-color: #ABCCD8;
@@ -389,6 +393,10 @@ nav {
       .oneProduct .prodBox .photoBox .prodPhoto {
         width: 100%;
         height: auto; }
+
+/* line 30, ../../../development/sass/_oneProduct.scss */
+.webshop .topbar h3 {
+  color: #ABCCD8; }
 
 /* line 1, ../../../development/sass/_shop.scss */
 .webshop {

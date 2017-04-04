@@ -17,7 +17,7 @@
                     <p>'.$products['prod_type'].'</p>
                 </div>
                 <div class="photoBox">
-                    <img src="./assets/images/uploads/'.$products['prod_photo'].'" class="prodPhoto" alt="Photo of product">
+               <a href="./products.php?id='.$products['prod_number'].'"><img src="./assets/images/uploads/'.$products['prod_photo'].'" class="prodPhoto" alt="Photo of product"></a>
                 </div>
                 <div class="prodText">
                     <h4>'.$products['prod_artist'].'</h4>

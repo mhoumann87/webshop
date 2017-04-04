@@ -164,7 +164,7 @@
         if (empty($errors2)) {
 
             if (addUser($name, $street, $houseno, $street2, $postno, $city, $phone, $mail, $pass, $status) === TRUE) {
-                redirect('./login.php');
+                redirect('./login.php?id=new');
             } else {
                 $addError = '<p class="error">Something went wrong, please try again</p>';
 

@@ -80,7 +80,7 @@ function getNewest() {
     return $newProd;
 }
 
-//get a product form a get request
+//get a product form a product link
 function findProduct($id) {
     global $conn;
     $getProduct = "SELECT * FROM products WHERE prod_number = $id LIMIT 1";
@@ -114,6 +114,24 @@ function productList($cat, $type) {
     $list = mysqli_query($conn, $listProducts);
     tjek_query($list);
     return $list;
+}
+
+//chect if a catogory exsist in the db
+function checkCatagory($cat) {
+    global $conn;
+    $findCategory = "SELECT * FROM products WHERE prod_category = '$cat'";
+    $category = mysqli_query($conn, $findCategory);
+    tjek_query($category);
+    return $category;
+}
+
+//check if a type exists in the db
+function checkType($type) {
+    global $conn;
+    $findType ="SELECT * FROM products WHERE prod_type = '$type'";
+    $type = mysqli_query($conn, $findType);
+    tjek_query($type);
+    return $type;
 }
 
 

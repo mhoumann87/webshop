@@ -47,9 +47,111 @@
     } else if (isset($_GET['cat'])) {
 
         if (isset($_GET['type'])) {
-            echo '<p>Both type and category</p>';
+            //show all products with category and type
+            $cat = cleanInput($_GET['cat']);
+            $type = cleanInput($_GET['type']);
+
+            //check to see if category AND type exsist in db
+            $checkCat = checkCatagory($cat);
+            $checkType = checkType($type);
+
+            if (mysqli_num_rows($checkCat) > 0 && mysqli_num_rows($checkType) > 0) {
+
+                echo '
+                <div class="webshop">
+                    <div class="category"> 
+                        <div class="topbar">
+                            <h3>'.$cat.'</h3>
+                        </div>
+                    <div class="type">
+                        <div class="typeTop">
+                            <h3>'.$type.'</h3>                
+                          </div>
+                 ';
+                $products = productList($cat, $type);
+                while ($product = mysqli_fetch_assoc($products)) {
+                    echo '
+                    <div class="product">
+
+                    <div class="photoBox">
+                    <a href="./products.php?id='.$product['prod_number'].'"><img src="./assets/images/uploads/'.$product['prod_photo'].'" class="prodPhoto" alt="Photo of product"></a>
+                    </div>
+                     <div class="prodText">
+                        <h4>'.$product['prod_artist'].'</h4>
+                        <h4>'.$product['prod_title'].'</h4>
+                        <br>
+                        <h3>DKR '.$product['prod_price'].'</h3>
+                        <a href="./products.php?id='.$product['prod_number'].'">Read more</a>
+                    </div>
+                </div>
+            
+                 ';
+                }//while product
+
+
+
+
+                echo '
+                </div>
+                </div>
+                </div>
+                ';
+            } else {
+                redirect('./not_found_404.php');
+            }//if (mysqli_num_rows($checkCat) > 0 && mysqli_num_rows($checkType) > 0)
+
         } else {
-            echo '<p>WE have a category</p>';
+            //show all products in this category all types
+            $cat = cleanInput($_GET['cat']);
+            $checkCat =  checkCatagory($cat);
+
+
+            if (mysqli_num_rows($checkCat) > 0) {
+
+                echo '
+                <div class="webshop">
+                    <div class="category"> 
+                        <div class="topbar">
+                            <h3>'.$cat.'</h3>
+                        </div>
+                ';
+
+
+                $types = findTypes();
+                while ($type = mysqli_fetch_assoc($types)) {
+                    echo '
+                    <div class="type">
+                        <div class="typeTop">
+                            <h3>'.$type['prod_type'].'</h3>                
+                        </div>
+                    ';
+                    $products = productList($cat, cleanInput($type['prod_type']));
+                    while ($product = mysqli_fetch_assoc($products)) {
+                        echo '
+                    <div class="product">
+
+                    <div class="photoBox">
+                        <a href="./products.php?id='.$product['prod_number'].'"><img src="./assets/images/uploads/'.$product['prod_photo'].'" class="prodPhoto" alt="Photo of product"></a>
+                    </div>
+                     <div class="prodText">
+                        <h4>'.$product['prod_artist'].'</h4>
+                        <h4>'.$product['prod_title'].'</h4>
+                        <br>
+                        <h3>DKR '.$product['prod_price'].'</h3>
+                        <a href="./products.php?id='.$product['prod_number'].'">Read more</a>
+                    </div>
+                </div>
+            
+                 ';
+                    }//while product
+
+                    echo '</div>';
+                }//while type
+
+                echo '</div>';
+            } else {
+                redirect('./not_found_404.php');
+            }
         }//if (isset($_GET['type']))
     } else {
         redirect('./not_found_404.php');

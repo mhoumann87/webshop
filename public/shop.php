@@ -39,7 +39,7 @@
             <div class="product">
 
                 <div class="photoBox">
-                    <img src="./assets/images/uploads/'.$product['prod_photo'].'" class="prodPhoto" alt="Photo of product">
+                    <a href="./products.php?id='.$product['prod_number'].'"><img src="./assets/images/uploads/'.$product['prod_photo'].'" class="prodPhoto" alt="Photo of product"></a>
                 </div>
                 <div class="prodText">
                     <h4>'.$product['prod_artist'].'</h4>
