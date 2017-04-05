@@ -1,0 +1,60 @@
+.orderBox {
+  background-color: $lightgreen;
+  overflow: hidden;
+  height: 65vh;
+  @include border-radius(10px);
+  @include border(5px);
+  padding: 0.850rem;
+  width: 60%;
+  margin: 0 auto;
+
+  .invoiceHead {
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+    .address {
+      width: 50%;
+    }
+
+    .invoiceDate {
+      width: 50%;
+      text-align: right;
+    }
+  }
+
+.tableBox {
+  width: 90%;
+  margin: 0 auto;
+  font-family: $fontText;
+  .invoice {
+    width: 100%;
+
+    thead {
+      text-align: left;
+      border-bottom: 3px solid $darkblue;
+      margin-bottom: 0.5rem;
+    }
+
+    th {
+      padding: 0.200rem;
+    }
+
+    td {
+      padding: 0.200rem;
+    }
+  }
+
+  .emptyRow {
+    height: 1rem;
+    border-bottom: 2px solid $darkblue;
+  }
+}
+
+  .sendOrder {
+    margin-top: 5rem;
+  }
+
+}

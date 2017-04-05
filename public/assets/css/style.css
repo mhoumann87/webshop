@@ -493,27 +493,82 @@ nav {
       margin: 1rem 0; }
       /* line 13, ../../../development/sass/_shop.scss */
       .webshop .category .topbar a, .webshop .category .topbar a:visited, .webshop .category .topbar a:active {
+        color: #ABCCD8;
         text-decoration: underline; }
-      /* line 17, ../../../development/sass/_shop.scss */
+      /* line 18, ../../../development/sass/_shop.scss */
       .webshop .category .topbar a:hover {
         color: lightgrey; }
-  /* line 23, ../../../development/sass/_shop.scss */
+  /* line 24, ../../../development/sass/_shop.scss */
   .webshop .type {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: baseline; }
-    /* line 30, ../../../development/sass/_shop.scss */
+    /* line 31, ../../../development/sass/_shop.scss */
     .webshop .type .typeTop {
       width: 100%;
       background-color: #ABCCD8;
       padding: 0.325rem;
       margin: 0.5rem 0; }
-      /* line 36, ../../../development/sass/_shop.scss */
+      /* line 37, ../../../development/sass/_shop.scss */
       .webshop .type .typeTop a, .webshop .type .typeTop a:visited, .webshop .type .typeTop a:active {
-        color: #6A94D7;
+        color: #E9FDFF;
         text-decoration: underline; }
-      /* line 41, ../../../development/sass/_shop.scss */
+      /* line 42, ../../../development/sass/_shop.scss */
       .webshop .type .typeTop a:hover {
         color: #706C60; }
+
+/* line 1, ../../../development/sass/_cart.scss */
+.orderBox {
+  background-color: #E9FDFF;
+  overflow: hidden;
+  height: 65vh;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px;
+  border: 5px solid #6A94D7;
+  padding: 0.850rem;
+  width: 60%;
+  margin: 0 auto; }
+  /* line 11, ../../../development/sass/_cart.scss */
+  .orderBox .invoiceHead {
+    width: 100%;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline; }
+    /* line 18, ../../../development/sass/_cart.scss */
+    .orderBox .invoiceHead .address {
+      width: 50%; }
+    /* line 22, ../../../development/sass/_cart.scss */
+    .orderBox .invoiceHead .invoiceDate {
+      width: 50%;
+      text-align: right; }
+  /* line 28, ../../../development/sass/_cart.scss */
+  .orderBox .tableBox {
+    width: 90%;
+    margin: 0 auto;
+    font-family: "Muli", sans-serif; }
+    /* line 32, ../../../development/sass/_cart.scss */
+    .orderBox .tableBox .invoice {
+      width: 100%; }
+      /* line 35, ../../../development/sass/_cart.scss */
+      .orderBox .tableBox .invoice thead {
+        text-align: left;
+        border-bottom: 3px solid #6A94D7;
+        margin-bottom: 0.5rem; }
+      /* line 41, ../../../development/sass/_cart.scss */
+      .orderBox .tableBox .invoice th {
+        padding: 0.200rem; }
+      /* line 45, ../../../development/sass/_cart.scss */
+      .orderBox .tableBox .invoice td {
+        padding: 0.200rem; }
+    /* line 50, ../../../development/sass/_cart.scss */
+    .orderBox .tableBox .emptyRow {
+      height: 1rem;
+      border-bottom: 2px solid #6A94D7; }
+  /* line 56, ../../../development/sass/_cart.scss */
+  .orderBox .sendOrder {
+    margin-top: 5rem; }

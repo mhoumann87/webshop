@@ -45,7 +45,7 @@
                     <h4>'.$product['prod_artist'].'</h4>
                     <h4>'.$product['prod_title'].'</h4>
                     <br>
-                    <h3>DKR '.$product['prod_price'].'</h3>
+                    <h3>DKR '.number_format((float)$product['prod_price'], 2, ',', '').'</h3>
                     <a href="./products.php?id='.$product['prod_number'].'">Read more</a>
                 </div>
             </div>

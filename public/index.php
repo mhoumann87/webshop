@@ -23,7 +23,7 @@
                     <h4>'.$products['prod_artist'].'</h4>
                     <h4>'.$products['prod_title'].'</h4>
                     <br>
-                    <h3>DKR '.$products['prod_price'].'</h3>
+                    <h3>DKR '.number_format((float)$products['prod_price'], 2, ',', '').'</h3>
                     <a href="./products.php?id='.$products['prod_number'].'">Read more</a>
                     
                 </div>
