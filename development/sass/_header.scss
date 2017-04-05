@@ -26,3 +26,26 @@ header {
     }
   }
 }
+
+.fullWidth {
+  width: 100%;
+  background-color: $lightgreen;
+}
+
+.welcomeBox {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: baseline;
+  text-align: right;
+
+  .welBox {
+    width: 15%;
+    padding: 0.425rem;
+
+  }
+
+}
+

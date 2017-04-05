@@ -84,34 +84,35 @@ p {
 
 /* line 34, ../../../development/sass/_base.scss */
 a, a:visited, a:active {
-  color: #E9FDFF;
-  text-decoration: none; }
+  color: #6A94D7;
+  text-decoration: underline;
+  font-family: "Muli", sans-serif; }
 
-/* line 40, ../../../development/sass/_base.scss */
+/* line 41, ../../../development/sass/_base.scss */
 a:hover {
-  color: #6A94D7; }
+  color: #ABCCD8; }
 
-/* line 44, ../../../development/sass/_base.scss */
+/* line 45, ../../../development/sass/_base.scss */
 main {
   width: 90%;
   margin: 1.5rem auto;
   overflow: hidden; }
 
-/* line 51, ../../../development/sass/_base.scss */
+/* line 52, ../../../development/sass/_base.scss */
 .redborder {
   border: 1px solid #EB0000; }
 
-/* line 55, ../../../development/sass/_base.scss */
+/* line 56, ../../../development/sass/_base.scss */
 .error {
   font-weight: bold;
   color: #EB0000; }
 
-/* line 60, ../../../development/sass/_base.scss */
+/* line 61, ../../../development/sass/_base.scss */
 .success {
   font-weight: bold;
   color: #00BD00; }
 
-/* line 65, ../../../development/sass/_base.scss */
+/* line 66, ../../../development/sass/_base.scss */
 .productList {
   width: 100%;
   display: flex;
@@ -119,7 +120,7 @@ main {
   justify-content: flex-start;
   align-items: baseline; }
 
-/* line 73, ../../../development/sass/_base.scss */
+/* line 74, ../../../development/sass/_base.scss */
 .product {
   width: 18%;
   background-color: #E9FDFF;
@@ -129,23 +130,23 @@ main {
   border-radius: 10px;
   border: 1px solid #6A94D7;
   margin: 0.5rem; }
-  /* line 80, ../../../development/sass/_base.scss */
+  /* line 81, ../../../development/sass/_base.scss */
   .product .photoBox {
     width: 100%; }
-    /* line 83, ../../../development/sass/_base.scss */
+    /* line 84, ../../../development/sass/_base.scss */
     .product .photoBox .prodPhoto {
       width: 100%;
       height: auto; }
-  /* line 89, ../../../development/sass/_base.scss */
+  /* line 90, ../../../development/sass/_base.scss */
   .product .prodText {
     width: 100%;
     padding: 0.425rem; }
-  /* line 94, ../../../development/sass/_base.scss */
+  /* line 95, ../../../development/sass/_base.scss */
   .product .info {
     font-size: 1.2rem;
     font-weight: bold;
     color: #6A94D7; }
-  /* line 100, ../../../development/sass/_base.scss */
+  /* line 101, ../../../development/sass/_base.scss */
   .product .hl {
     background-color: #6A94D7;
     padding: 0.425rem;
@@ -153,18 +154,18 @@ main {
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     border-radius: 10px; }
-    /* line 105, ../../../development/sass/_base.scss */
+    /* line 106, ../../../development/sass/_base.scss */
     .product .hl h4 {
       color: #ABCCD8; }
-    /* line 109, ../../../development/sass/_base.scss */
+    /* line 110, ../../../development/sass/_base.scss */
     .product .hl p {
       color: #ABCCD8; }
-  /* line 114, ../../../development/sass/_base.scss */
+  /* line 115, ../../../development/sass/_base.scss */
   .product a, .product a:visited, .product a:active {
     color: #6A94D7;
     text-decoration: underline; }
 
-/* line 120, ../../../development/sass/_base.scss */
+/* line 121, ../../../development/sass/_base.scss */
 .center {
   text-align: center; }
 
@@ -192,6 +193,25 @@ header {
       header .headerBox .shopLogo .logoSvg {
         width: 3.2rem;
         height: auto; }
+
+/* line 30, ../../../development/sass/_header.scss */
+.fullWidth {
+  width: 100%;
+  background-color: #E9FDFF; }
+
+/* line 35, ../../../development/sass/_header.scss */
+.welcomeBox {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  align-items: baseline;
+  text-align: right; }
+  /* line 44, ../../../development/sass/_header.scss */
+  .welcomeBox .welBox {
+    width: 15%;
+    padding: 0.425rem; }
 
 /* line 1, ../../../development/sass/_footer.scss */
 footer {
@@ -226,34 +246,95 @@ footer {
       footer .footerBox .socialBox .socialIcon {
         width: 25%;
         text-align: center;
-        font-size: 2.5rem;
-        color: #6A94D7; }
+        font-size: 2.5rem; }
+        /* line 39, ../../../development/sass/_footer.scss */
+        footer .footerBox .socialBox .socialIcon a, footer .footerBox .socialBox .socialIcon a:visited, footer .footerBox .socialBox .socialIcon a:active {
+          color: #E9FDFF; }
+        /* line 43, ../../../development/sass/_footer.scss */
+        footer .footerBox .socialBox .socialIcon a:hover {
+          color: #6A94D7; }
 
-/* line 1, ../../../development/sass/_navbar.scss */
+/*base setup*/
+/* line 2, ../../../development/sass/_navbar.scss */
 nav {
   width: 100%;
-  height: auto;
-  overflow: hidden;
-  background-color: #E9FDFF;
-  margin: 0; }
-  /* line 8, ../../../development/sass/_navbar.scss */
-  nav a, nav a:visited, nav a:active {
-    color: black; }
-  /* line 12, ../../../development/sass/_navbar.scss */
-  nav ul {
-    padding: 0;
-    margin: 0; }
-  /* line 17, ../../../development/sass/_navbar.scss */
-  nav li {
-    display: inline;
-    position: relative; }
-  /* line 22, ../../../development/sass/_navbar.scss */
-  nav ul ul {
-    position: absolute;
-    display: none; }
-  /* line 28, ../../../development/sass/_navbar.scss */
-  nav li:hover ul {
-    display: block; }
+  background-color: #ABCCD8; }
+
+/* line 7, ../../../development/sass/_navbar.scss */
+.navbar {
+  width: 90%;
+  margin: 0 auto; }
+
+/* line 12, ../../../development/sass/_navbar.scss */
+.dropDownMenu a {
+  color: #6A94D7; }
+
+/* line 16, ../../../development/sass/_navbar.scss */
+.dropDownMenu, .dropDownMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/* line 22, ../../../development/sass/_navbar.scss */
+.dropDownMenu li {
+  position: relative; }
+
+/* line 26, ../../../development/sass/_navbar.scss */
+.dropDownMenu a {
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none; }
+
+/* line 32, ../../../development/sass/_navbar.scss */
+.dropDownMenu a:hover {
+  background: #6A94D7;
+  color: #ABCCD8; }
+
+/*level one*/
+/* line 40, ../../../development/sass/_navbar.scss */
+.dropDownMenu > li {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: -4px;
+  width: 12%; }
+
+/* line 47, ../../../development/sass/_navbar.scss */
+.dropDownMenu > li:first-child {
+  margin-left: 0; }
+
+/*level 2*/
+/* line 57, ../../../development/sass/_navbar.scss */
+.dropDownMenu > li > ul {
+  text-align: left;
+  width: auto;
+  display: none;
+  background: #E9FDFF;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 9; }
+  /* line 67, ../../../development/sass/_navbar.scss */
+  .dropDownMenu > li > ul .right {
+    text-align: right; }
+
+/* line 72, ../../../development/sass/_navbar.scss */
+.dropDownMenu > li:hover > ul {
+  display: block; }
+
+/* Level 3 */
+/* line 80, ../../../development/sass/_navbar.scss */
+.dropDownMenu > li > ul > li > ul {
+  text-align: left;
+  display: none;
+  background: #f7f2e7;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  z-index: 9999999; }
+
+/* line 89, ../../../development/sass/_navbar.scss */
+.dropDownMenu > li > ul > li:hover > ul {
+  display: block; }
 
 /* line 1, ../../../development/sass/_login.scss */
 .formBox {

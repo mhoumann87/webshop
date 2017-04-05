@@ -32,13 +32,14 @@ p {
 }
 
 a, a:visited, a:active {
-  color: $lightgreen;
-  text-decoration: none;
+  color: $darkblue;
+  text-decoration: underline;
+  font-family: $fontText;
 
 }
 
 a:hover {
-  color: $darkblue;
+  color: $lightblue;
 }
 
 main {

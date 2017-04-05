@@ -31,7 +31,33 @@
                                 <br>
                                 <h3>Price: ' . $product['prod_price'] . '</h3>
                                 <br>
-                                <button class="button" >Add To Cart</button>
+                                <form action="products.php?id='.$prodNo.'" method="post">
+                                <p><label>Quantity:&nbsp;</label><select name="quantity">
+                                   <option value="1" selected>1</option>
+                                   <option value="2">2</option>
+                                   <option value="3">3</option>
+                                   <option value="4">4</option>
+                                   <option value="5">5</option>
+                                   </select><input type="submit" value="Add to chart"> </p>
+                                   
+             ';
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+                        if ($_SESSION['id']) {
+
+                            if (isset($_SESSION['cart'])) {
+                                $_SESSION['cart'] = addToCart($_SESSION['cart'], $product['prod_number'], $_POST['quantity']);
+                                echo '<p class="success">Product added to your cart</p>';
+                            } else {
+                                $_SESSION['cart'] = array();
+                                $_SESSION['cart'] = addToCart($_SESSION['cart'], $product['prod_number'], $_POST['quantity']);
+                                echo '<p class="success">Product added to your cart</p>';
+                            }
+                        } else {
+                            redirect('./login.php?id=shop');
+                        }
+                    }//server request
+            echo '
                          </div>
                     </div>
                     <div class="description">

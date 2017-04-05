@@ -9,8 +9,8 @@
 
             if (isset($_GET['id']) && $_GET['id'] == 'new') {
                 echo '<h6 class="center">Welcome to the shop, please login before you continue</h6>';
-            } else {
-                echo '';
+            } else if (isset($_GET['id']) && $_GET['id'] == 'shop') {
+                echo '<h6 class="center error">You have to be looged in to use the shop</h6>';
             }
 
             $e1 = '';
@@ -65,8 +65,8 @@
 
                         $_SESSION['id'] = $findUser['user_id'];
                         $_SESSION['name'] = $findUser['user_name'];
-                        $_SESSION{'admin'} = $findUser['user_status'];
-                        $_SESSION['cart'] = array();
+                        $_SESSION{'status'} = $findUser['user_status'];
+
 
                         redirect('shop.php');
                     } else {

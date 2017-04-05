@@ -42,6 +42,12 @@ function usedProdNo($prodNo) {
     }
 }
 
+//push items in to shopping cart
+function addToCart($array, $key, $value) {
+    $array[$key] = $value;
+    return $array;
+}
+
 
 /***
  *  Database Functions
@@ -132,6 +138,15 @@ function checkType($type) {
     $type = mysqli_query($conn, $findType);
     tjek_query($type);
     return $type;
+}
+
+//find user for cart
+function getUser($id) {
+    global $conn;
+    $findUser = "SELECT * FROM users WHERE user_id = '$id' LIMIT 1";
+    $user = mysqli_query($conn, $findUser);
+    tjek_query($user);
+    return $user;
 }
 
 

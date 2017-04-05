@@ -1,10 +1,19 @@
 <?php include_once ('../includes/header.inc.php'); ?>
 
+<?php
+if (!isset($_SESSION['status'])) {
+    redirect('./access401.php');
+} else if ($_SESSION['status'] != 'admin') {
+    redirect('./access401.php');
+}
+?>
+
     <main>
         <h2>All Products</h2>
         <div class="productList">
 
             <?php
+
 
             $prodList = getProducts();
 

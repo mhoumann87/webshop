@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./assets/css/font-awesome-4.7.0/css/font-awesome.min.css" type="text/css">
     <title>Web Shop - Home</title>
 </head>
-<body>
+<div>
 
 <header>
     <div class="headerBox">
@@ -24,5 +24,26 @@
         </div>
     </div>
 </header>
+<?php
+
+if (isset($_SESSION['id'])) {
+    echo '
+         
+       <div class="fullWidth">
+            <div class="welcomeBox">
+                <div class="welBox"><p>Welcome '.$_SESSION['name'].'</p></div>
+     ';
+          if (isset($_SESSION['cart'])) {
+              $quant = count($_SESSION['cart']);
+              echo '<div class="welBox"><p><i class="fa fa-shopping-cart" aria-hidden="true"></i>&nbsp;'.$quant.' items</p></div>
+                    <div class="welBox"><a href="./cart.php" class="center">Go to cart</a></div>';
+          }
+    echo '
+                <div class="welBox"><a href="./logout.php">Log Out</a></div>
+            </div>
+        </div>
+    ';
+}
+?>
 
 <?php include_once ('navbar.inc.php') ?>

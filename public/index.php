@@ -25,6 +25,7 @@
                     <br>
                     <h3>DKR '.$products['prod_price'].'</h3>
                     <a href="./products.php?id='.$products['prod_number'].'">Read more</a>
+                    
                 </div>
             </div>
             ';
