@@ -31,7 +31,7 @@
                                 <br>
                                 <h3>Price: '.number_format((float)$product['prod_price'], 2, ',', '').'</h3>
                                 <br>
-                                <form action="products.php?id='.$prodNo.'" method="post">
+                                <form action="./products.php?id='.$prodNo.'" method="post">
                                 <p><label>Quantity:&nbsp;</label><select name="quantity">
                                    <option value="1" selected>1</option>
                                    <option value="2">2</option>
@@ -39,7 +39,7 @@
                                    <option value="4">4</option>
                                    <option value="5">5</option>
                                    </select><input type="submit" value="Add to chart"> </p>
-                                   
+                                </form>   
              ';
                     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
@@ -48,17 +48,22 @@
                             if (isset($_SESSION['cart'])) {
 
                                 $_SESSION['cart'] = addToCart($_SESSION['cart'], $product['prod_number'], $_POST['quantity']);
-                                echo '<p class="success">Product added to your cart</p>';
+                                redirect( './shop.php');
+
                             } else {
                                 $_SESSION['cart'] = array();
                                 $_SESSION['cart'] = addToCart($_SESSION['cart'], $product['prod_number'], $_POST['quantity']);
-                                echo '<p class="success">Product added to your cart</p>';
+                                redirect( './shop.php');
                             }
                         } else {
                             redirect('./login.php?id=shop');
                         }
                     }//server request
             echo '
+                        <br>
+                        <br>
+                        <br>
+                        <p><a href="./shop.php">Back to shop </a> or <a href="./index.php">frontpage</a></p>
                          </div>
                     </div>
                     <div class="description">
@@ -109,6 +114,35 @@
                         <br>
                         <h3>DKR '.number_format((float)$product['prod_price'], 2, ',', '').'</h3>
                         <a href="./products.php?id='.$product['prod_number'].'">Read more</a>
+                                <form action="./products.php?cat='.$cat.'&type='.$type.'" method="post">
+                                <p><label>Quantity:&nbsp;</label><select name="quantity">
+                                   <option value="1" selected>1</option>
+                                   <option value="2">2</option>
+                                   <option value="3">3</option>
+                                   <option value="4">4</option>
+                                   <option value="5">5</option>
+                                   </select><input type="submit" value="Add to chart"> </p>
+                                </form>   
+             ';
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+                        if ($_SESSION['id']) {
+
+                            if (isset($_SESSION['cart'])) {
+
+                                $_SESSION['cart'] = addToCart($_SESSION['cart'], $product['prod_number'], $_POST['quantity']);
+                                redirect( './shop.php');
+
+                            } else {
+                                $_SESSION['cart'] = array();
+                                $_SESSION['cart'] = addToCart($_SESSION['cart'], $product['prod_number'], $_POST['quantity']);
+                                redirect( './shop.php');
+                            }
+                        } else {
+                            redirect('./login.php?id=shop');
+                        }
+                    }//server request
+                    echo ';
                     </div>
                 </div>
             
@@ -166,6 +200,35 @@
                         <br>
                         <h3>DKR '.number_format((float)$product['prod_price'], 2, ',', '').'</h3>
                         <a href="./products.php?id='.$product['prod_number'].'">Read more</a>
+                                                        <form action="./products.php?cat='.$cat.'" method="post">
+                                <p><label>Quantity:&nbsp;</label><select name="quantity">
+                                   <option value="1" selected>1</option>
+                                   <option value="2">2</option>
+                                   <option value="3">3</option>
+                                   <option value="4">4</option>
+                                   <option value="5">5</option>
+                                   </select><input type="submit" value="Add to chart"> </p>
+                                </form>   
+             ';
+                    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+                        if ($_SESSION['id']) {
+
+                            if (isset($_SESSION['cart'])) {
+
+                                $_SESSION['cart'] = addToCart($_SESSION['cart'], $product['prod_number'], $_POST['quantity']);
+                                redirect( './shop.php');
+
+                            } else {
+                                $_SESSION['cart'] = array();
+                                $_SESSION['cart'] = addToCart($_SESSION['cart'], $product['prod_number'], $_POST['quantity']);
+                                redirect( './shop.php');
+                            }
+                        } else {
+                            redirect('./login.php?id=shop');
+                        }
+                    }//server request
+                    echo ';
                     </div>
                 </div>
             

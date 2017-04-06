@@ -111,6 +111,8 @@ echo '
         <input type="submit" value="Send Order">
     </form>
 </div>
+
+    <p><a href="./shop.php">Back to shop </a> or <a href="./index.php">frontpage</a></p>
     </div>
     </main>
 ';
